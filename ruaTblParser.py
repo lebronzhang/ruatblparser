@@ -8,28 +8,49 @@
 from math import *
 
 class PyLuaTblParser:
-    def __init__(self, state):
+    def __init__(self):
+    	pass
         # The state. This is the core data of the Kalman filter.
-        self.state = state
         # Some constants.
         # Currently, the number of landmarks is zero.
 
+    # def __init__(self, state):
+    #     # The state. This is the core data of the Kalman filter.
+    #     self.state = state
+
     def load(self, s):
+        self.str = s
 
     def dump(self):
+        print(self.str)
 
-    def loadLuaTable(self, f):
+    # def loadLuaTable(self, f):
 
-    def dumpLuaTable(self, f):
+    # def dumpLuaTable(self, f):
 
-    def loadDict(self, d):
+    # def loadDict(self, d):
 
-    def dumpDict(self):  
+    def dumpDict(self): 
+    	sp = self.str.split('},')
+    	print(sp)
 
 if __name__ == '__main__':
 
     # Setup.
-    kf = PyLuaTblParser(initial_state)
+    a1 = PyLuaTblParser()
+    # a2 = PyLuaTblParser()
+    # a3 = PyLuaTblParser()
+    test_str = '{array = {65,23,5,},dict = {mixed = {43,54.33,false,9,string = "value",},array = {3,6,4,},string = "value",},}'
+    a1.load(test_str)
+    a1.dump()
+    a1.dumpDict()
+    # d1 = a1.dumpDict()
+
+    # a2.loadDict(d1)
+    # a2.dumpLuaTable(file_path)
+    # a3.loadLuaTable(file_path)
+
+    # d3 = a3.dumpDict()
     # Read data.
     """
     # Loop
